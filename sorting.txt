@@ -1,0 +1,16 @@
+ALGORITHM Insertion_sort
+
+VAR 
+I,J : INTEGER;
+BEGIN
+
+    DO
+    FOR I FROM 1 TO tab.lenght-1 DO
+        For J FROM I-1 TO tab.lenght-1 DO
+            IF tab[J]<tab[I] THEN
+                swap(tab[J],tab[I]);
+            END_IF
+        END_FOR
+    END_FOR
+    while (stop=TRUE);
+END
