@@ -1,16 +1,19 @@
 ALGORITHM Insertion_sort
+VAR
+      array : ARRAY_OF INTEGER[];
+      key,current : INTEGER;
+BEGIN 
+ read(array);
+      FOR i FROM 1 TO array.length STEP 1  DO
+            key := array[i]
+            current :=i-1
 
-VAR 
-I,J : INTEGER;
-BEGIN
-
-    DO
-    FOR I FROM 1 TO tab.lenght-1 DO
-        For J FROM I-1 TO tab.lenght-1 DO
-            IF tab[J]<tab[I] THEN
-                swap(tab[J],tab[I]);
-            END_IF
-        END_FOR
-    END_FOR
-    while (stop=TRUE);
+            WHILE (j>=0 and array[j] > key) DO
+                  array[j+1] = array[j]
+                  j = j-1;
+            END_WHILE
+            array[j+1]=key
+      END_FOR
+      
+      write(array);
 END
